@@ -10,7 +10,7 @@
 ## 🏛️ Informations Académiques
 * **Institution :** Université Polytechnique de Gitega  
 * **Faculté :** Faculté des Technologies de l'Information et de la Communication (FTIC)  
-* **Département :** Génie Logiciel / BAC3  
+* **Département :** Génie Logiciel / BAC4  
 * **Année Universitaire :** 2025-2026  
 * **Auteurs :** 
   * **IRABARUTA Olivier Jeremie**
