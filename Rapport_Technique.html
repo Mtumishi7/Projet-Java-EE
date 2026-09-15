@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport Technique - Gestion Stages & PFE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            body { print-color-adjust: exact; -webkit-print-color-adjust: exact; background: white !important; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+            .page-break { page-break-after: always; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-100 via-indigo-50/30 to-slate-200 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <main class="max-w-4xl mx-auto bg-white/90 backdrop-blur-xl p-8 sm:p-14 rounded-3xl shadow-2xl border border-slate-200/80">
+        
+        <!-- Header Banner -->
+        <div class="text-center pb-8 border-b border-slate-200 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                🎓 Université Polytechnique de Gitega
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+                Rapport Technique Projet Java EE
+            </h1>
+            <p class="text-slate-600 font-medium text-lg">
+                Application Web Multi-Tiers de Gestion des Stages & PFE
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-3 pt-4">
+                <div class="bg-indigo-50 border border-indigo-200 rounded-2xl px-5 py-3 text-left">
+                    <div class="text-xs font-semibold text-indigo-600 uppercase tracking-wide">Auteurs</div>
+                    <div class="text-slate-900 font-bold text-sm sm:text-base">IRABARUTA Olivier Jeremie & AYIKUNDE Juste Daxa</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3 text-left">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Filière / Promotion</div>
+                    <div class="text-slate-900 font-bold text-sm sm:text-base">Génie Logiciel / BAC3 (2025-2026)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Body -->
+        <article class="mt-8">
+            <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mt-8 mb-4">RAPPORT TECHNIQUE DE PROJET JAVA EE</h1>
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">Gestion des Stages et Projets de Fin d'Études (PFE)</h2>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+<strong class="font-bold text-slate-900">Université Polytechnique de Gitega</strong>  
+<strong class="font-bold text-slate-900">Faculté des Technologies de l'Information et de la Communication</strong>  
+<strong class="font-bold text-slate-900">Département de Génie Logiciel / BAC3</strong>  
+<strong class="font-bold text-slate-900">Année universitaire :</strong> 2025-2026
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+<strong class="font-bold text-slate-900">Auteurs :</strong> IRABARUTA Olivier Jeremie & AYIKUNDE Juste Daxa
+</p>
+---
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">1. Introduction et Présentation du Projet</h2>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">1.1 Contexte et Problématique</h3>
+La gestion administrative et pédagogique des stages académiques et des Projets de Fin d'Études (PFE) au sein de l'université nécessite un suivi rigoureux. Le processus traditionnel basé sur des documents papiers ou des échanges d'e-mails non structurés entraîne des pertes d'informations, des difficultés dans le suivi des workflows de validation et un manque de visibilité pour les étudiants et les encadreurs.
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">1.2 Objectifs de l'Application</h3>
+L'application <strong class="font-bold text-slate-900">GestionProjetjavaEE</strong> a été conçue pour digitaliser et fluidifier l'ensemble du cycle de vie des stages et PFE :
+* Soumission de sujets et choix d'entreprises par les étudiants.
+* Validation, refus ou demande de modification par les encadreurs et administrateurs.
+* Suivi des états d'avancement (Brouillon, Soumise, Validée, En cours, Rapport déposé, Soutenue, Évaluée, Archivée).
+* Gestion des documents (CV, rapports) et des fils de discussion / commentaires.
+* Planification des soutenances et génération d'attestations officielles.
+---
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">2. Architecture de l'Application (Multi-Tiers)</h2>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+L'application respecte strictement l'architecture multi-tiers préconisée en Java EE, garantissant une séparation claire des responsabilités entre les couches :
+</p>
+<div class="my-6 rounded-2xl overflow-hidden shadow-md border border-slate-800 bg-slate-950">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-indigo-400 font-semibold">Code Source Java EE</span>
+            <div class="flex space-x-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+            </div>
+        </div>
+        <pre class="p-5 text-slate-100 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code>[ Couche Présentation (JSP / JSTL / Servlets) ]
+                     ↓ (Injections CDI @Inject)
+[ Couche Métier (Session Beans EJB @Stateless) ]
+                     ↓ (EntityManager / JPQL)
+[ Couche Persistance (Entités JPA & Base de Données) ]
+</code></pre>
+    </div>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">2.1 Couche Présentation (Web)</h3>
+* <strong class="font-bold text-slate-900">Servlets Jakarta EE (`@WebServlet`) :</strong> Agissent comme des contrôleurs frontaux (`DemandeStageServlet`, `EntrepriseServlet`, `CommentaireServlet`, `AttestationServlet`, `AdminServlet`) pour traiter les requêtes HTTP (`doGet`, `doPost`), gérer le routage et appliquer la sécurité via des filtres (`AuthentificationFilter`).
+* <strong class="font-bold text-slate-900">JSP & JSTL :</strong> Vues dynamiques 100% sans scriptlets Java purs, utilisant exclusivement les balises JSTL (`<c:forEach>`, `<c:if>`, etc.) et le langage d'expression (EL).
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">2.2 Couche Métier (EJB - Enterprise JavaBeans)</h3>
+* Composée de <strong class="font-bold text-slate-900">Session Beans Stateless</strong> (`DemandeStageService`, `EntrepriseService`, `CommentaireService`, `UtilisateurService`, `ActivityLogService`).
+* Encapsule toute la logique métier, la gestion des transactions et les règles de validation du workflow.
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">2.3 Couche Persistance (JPA - Jakarta Persistence)</h3>
+* Modèle de données objet relationnel robuste mappé via JPA / Hibernate (`EntityManager`).
+* Entités principales : `Utilisateur`, `Etudiant`, `Encadreur`, `Entreprise`, `DemandeStage`, `Commentaire`, `Document`, `Soutenance`, `Evaluation`, `ActivityLog`.
+---
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">3. Modélisation et Conception</h2>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">3.1 Acteurs du Système</h3>
+1. <strong class="font-bold text-slate-900">Étudiant :</strong> Soumet ses propositions de stage/PFE, choisit son entreprise, dépose ses rapports, consulte les commentaires et télécharge son attestation.
+2. <strong class="font-bold text-slate-900">Encadreur (Enseignant) :</strong> Valide ou refuse les sujets, suit l'avancement, échange via le fil de discussion et évalue les soutenances.
+3. <strong class="font-bold text-slate-900">Administrateur :</strong> Gère l'ensemble des utilisateurs, consulte les journaux d'activités (`ActivityLog`) et supervise la plateforme.
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">3.2 Diagramme de Classes (Résumé des relations JPA)</h3>
+* `Utilisateur` (1) ──── (0..1) `Etudiant` / `Encadreur`
+* `DemandeStage` (N) ──── (1) `Etudiant`
+* `DemandeStage` (N) ──── (0..1) `Encadreur`
+* `DemandeStage` (N) ──── (1) `Entreprise`
+* `DemandeStage` (1) ──── (N) `Commentaire`
+* `DemandeStage` (1) ──── (N) `Document`
+* `DemandeStage` (1) ──── (0..1) `Soutenance`
+---
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">4. Extraits de Code Clés</h2>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">4.1 Entité JPA (`DemandeStage.java`)</h3>
+<div class="my-6 rounded-2xl overflow-hidden shadow-md border border-slate-800 bg-slate-950">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-indigo-400 font-semibold">Code Source Java EE</span>
+            <div class="flex space-x-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+            </div>
+        </div>
+        <pre class="p-5 text-slate-100 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code>@Entity
+@Table(name = "demandes_stage")
+public class DemandeStage implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@Column(nullable = false)
+    private String sujet;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@Column(length = 1000)
+    private String description;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private StatutDemande statut = StatutDemande.BROUILLON;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+private String technologies;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@ManyToOne
+    @JoinColumn(name = "etudiant_id", nullable = false)
+    private Etudiant etudiantEntity;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@ManyToOne
+    @JoinColumn(name = "entreprise_id")
+    private Entreprise entreprise;
+    
+    // Getters et Setters...
+}
+</code></pre>
+    </div>
+</p>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">4.2 Composant Métier EJB (`DemandeStageService.java`)</h3>
+<div class="my-6 rounded-2xl overflow-hidden shadow-md border border-slate-800 bg-slate-950">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-indigo-400 font-semibold">Code Source Java EE</span>
+            <div class="flex space-x-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+            </div>
+        </div>
+        <pre class="p-5 text-slate-100 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code>@Stateless
+public class DemandeStageService {
+    @PersistenceContext(unitName = "GestionProjetPU")
+    private EntityManager em;
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+public void enregistrerBrouillon(DemandeStage demande) {
+        em.persist(demande);
+    }
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+public void soumettreDemande(Long id) {
+        DemandeStage d = em.find(DemandeStage.class, id);
+        if (d != null && d.getStatut() == StatutDemande.BROUILLON) {
+            d.setStatut(StatutDemande.SOUMISE);
+            em.merge(d);
+        }
+    }
+    
+    public List&lt;DemandeStage&gt; listerParEtudiant(Long etudiantId) {
+        return em.createQuery("SELECT d FROM DemandeStage d WHERE d.etudiantEntity.id = :id", DemandeStage.class)
+                 .setParameter("id", etudiantId)
+                 .getResultList();
+    }
+}
+</code></pre>
+    </div>
+</p>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">4.3 Contrôleur Servlet avec Injection CDI (`DemandeStageServlet.java`)</h3>
+<div class="my-6 rounded-2xl overflow-hidden shadow-md border border-slate-800 bg-slate-950">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-indigo-400 font-semibold">Code Source Java EE</span>
+            <div class="flex space-x-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+            </div>
+        </div>
+        <pre class="p-5 text-slate-100 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code>@WebServlet(name = "DemandeStageServlet", urlPatterns = {"/demandes", "/demandes/nouvelle", "/demandes/action"})
+public class DemandeStageServlet extends HttpServlet {
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@Inject
+    private DemandeStageService demandeService;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@Inject
+    private EntrepriseService entrepriseService;
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+@Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        HttpSession session = request.getSession(false);
+        Utilisateur user = (Utilisateur) session.getAttribute("utilisateurConnecte");
+</p>
+<p class="text-slate-700 my-4 leading-relaxed text-base">
+String uri = request.getRequestURI().substring(request.getContextPath().length());
+        if ("/demandes/nouvelle".equals(uri)) {
+            request.setAttribute("entreprises", entrepriseService.listerToutes());
+            request.getRequestDispatcher("/WEB-INF/views/form-demande.jsp").forward(request, response);
+            return;
+        }
+        
+        List&lt;DemandeStage&gt; demandes = demandeService.listerToutes();
+        request.setAttribute("demandes", demandes);
+        request.getRequestDispatcher("/WEB-INF/views/demandes.jsp").forward(request, response);
+    }
+}
+</code></pre>
+    </div>
+</p>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">4.4 Vue JSP / JSTL (`demandes.jsp`)</h3>
+<div class="my-6 rounded-2xl overflow-hidden shadow-md border border-slate-800 bg-slate-950">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-indigo-400 font-semibold">Code Source Java EE</span>
+            <div class="flex space-x-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+            </div>
+        </div>
+        <pre class="p-5 text-slate-100 text-xs sm:text-sm font-mono overflow-x-auto leading-relaxed"><code>&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;%@ taglib prefix="c" uri="jakarta.tags.core" %&gt;
+...
+&lt;c:forEach var="d" items="${demandes}"&gt;
+    &lt;tr class="hover:bg-slate-50"&gt;
+        &lt;td class="py-4 px-6 font-medium"&gt;#&lt;c:out value="${d.id}"/&gt;&lt;/td&gt;
+        &lt;td class="py-4 px-6 font-semibold"&gt;&lt;c:out value="${d.sujet}"/&gt;&lt;/td&gt;
+        &lt;td class="py-4 px-6"&gt;
+            &lt;span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800"&gt;
+                &lt;c:out value="${d.statut}"/&gt;
+            &lt;/span&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/c:forEach&gt;
+</code></pre>
+    </div>
+---
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">5. Choix Techniques et Difficultés Rencontrées</h2>
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">5.1 Choix Techniques</h3>
+* <strong class="font-bold text-slate-900">Choix de Jakarta EE 10 / GlassFish 7+ :</strong> Permet de respecter les standards d'entreprise modernes sans dépendre de frameworks lourds comme Spring Boot, tout en profitant de l'injection de dépendances CDI native et de la robustesse des EJB.
+* <strong class="font-bold text-slate-900">Tailwind CSS (via CDN) :</strong> Choisi pour styliser rapidement l'interface utilisateur avec un design moderne et responsive, sans alourdir le serveur d'application par des compilateurs de assets complexes.
+<h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">5.2 Difficultés Rencontrées</h3>
+* <strong class="font-bold text-slate-900">Gestion des sessions et sécurité multi-rôles :</strong> La mise en place d'un filtre d'authentification (`AuthentificationFilter`) a nécessité une attention particulière pour interdire l'accès aux URLs administratives ou étudiantes selon le rôle stocké en session.
+* <strong class="font-bold text-slate-900">Mappage relationnel JPA :</strong> La structuration des clés étrangères entre `Utilisateur`, `Etudiant`, `DemandeStage` et `Entreprise` a exigé un contrôle rigoureux des cascades et des transactions gérées par le conteneur EJB (`@Stateless`).
+---
+<h2 class="text-2xl font-bold text-indigo-700 mt-8 mb-4 pb-2 border-b border-indigo-100 flex items-center gap-2">6. Conclusion</h2>
+Le développement de l'application <strong class="font-bold text-slate-900">GestionProjetjavaEE</strong> a permis de mettre en pratique les concepts fondamentaux de l'architecture multi-tiers Java EE. Le respect strict des contraintes pédagogiques (zéro framework tiers interdit, utilisation de Servlets, JSP/JSTL, EJB, JPA et CDI) aboutit à une solution logicielle modulaire, maintenable et pleinement fonctionnelle.
+        </article>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-xs text-slate-400 font-medium flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>Département de Génie Logiciel — Université Polytechnique de Gitega</span>
+            <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full">Architecture Multi-Tiers Jakarta EE 10</span>
+        </footer>
+    </main>
+</body>
+</html>
